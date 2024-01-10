@@ -10,4 +10,9 @@ for (var i = 0; i <= 10; i++) {
 
 var num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-for (var i = 0; i)
+var squareArr = []
+
+for (var i = 0; i < num.length; i++) {
+  squareArr.push(num[i] * num[i])
+}
+console.log(squareArr)
