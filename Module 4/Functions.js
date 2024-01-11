@@ -14,7 +14,8 @@ function Add (a, b) {
 
 Add(4, 5)
 
-// Expressions : It is a set of statements
+// Function Expression : It is a set of statements
+// The main advantage of function expression is that you cannot call an function expression before declaring that.
 
 var add = function (x, y) {
   // console.log(x + y)
