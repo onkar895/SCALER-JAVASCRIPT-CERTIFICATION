@@ -50,6 +50,29 @@ console.log(fName)
 console.log(lName)
 console.log(web)
 
+// Nested Object destructuring :
+// Object destructuring is a unique technique that allows you to neatly extract an object’s value into new variables.
+
+const MyProfile = {
+  f1Name: 'Onkar',
+  l1Name: 'Karale',
+  web1: 'onkarkarale.com',
+
+  address: {
+    country: 'india',
+    city : 'karad'
+  }
+}
+
+const { f1Name, l1Name, web1, address:{country, city} } = MyProfile
+
+console.log(f1Name)
+console.log(l1Name)
+console.log(web1)
+// console.log(address)
+console.log(country)
+console.log(city)
+
 // Object destructuring using rest{...} operator :
 
 const {fName2, ...OtherInfo} = {
