@@ -14,8 +14,10 @@ for (let i = 0; i < arr.length; i++) {
 console.log(arrSquare)
 
 // Higher Ordedr Function : Using map
-let arr1 = [1, 2, 3, 4, 5]
+const arr1 = [1, 2, 3, 4, 5]
 
-const Square = arr1.map((x) => {
-  console.log(x * x)
+const SquaredArr = arr1.map((x) => {
+  return (x * x)
 })
+
+console.log(SquaredArr)
