@@ -13,9 +13,12 @@ for (let i = 0; i < arr.length; i++) {
 }
 console.log(arrSquare)
 
-// Higher Order Function : 
+// Higher Order Function :
+
 // Using map method to get Squared array  :
-// Map will loop through eveery element of your array and will perform specific operations that you have provided
+// Map will loop through eveery element of your array and will perform specific operations that you have provided.
+//  It creates a new array by applying a provided function to each element of the original array. The result of the function for each element is collected into a new array, and this new array is returned.
+
 const arr1 = [1, 2, 3, 4, 5]
 
 const SquaredArr = arr1.map((x) => {
