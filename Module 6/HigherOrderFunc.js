@@ -26,13 +26,20 @@ console.log(SquaredArr)
 
 // Another Example :
 // Convert Rs. into $
-
 const transactions = [1000, 2000, 3000, 5000, 7000, 8000]
 
 const INRTODOLLAR = 80
 
 const transactionInINR = transactions.map((Inr) => {
-  return Inr / INRTODOLLAR
+  return (Inr / INRTODOLLAR).toFixed(0)
 })
 
 console.log(transactionInINR)
+
+// ForEach Method :
+//  It does not return anything (or returns undefined). It is used for iterating over the elements of an array and performing a side effect (like modifying the array or performing some operation on each element).
+// The only difference in 'map and forEach' that forEach actually won't return anything. So, You can use forEach inside its scope only.
+// And also forEach will not return a new array, It will only return the values which neither an array nor an objects.
+const transactionInINR1 = transactions.forEach((Inr) => {
+  console.log((Inr / INRTODOLLAR).toFixed(0))
+})
