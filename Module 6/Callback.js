@@ -28,3 +28,16 @@ FirstName('Rishi', LastName)
 function LastName (lName) {
   console.log(lName)
 }
+
+// Example : Checks for the even number
+
+const isEven = (n) => {
+  return n % 2 == 0
+}
+
+let printResult = (evenFn, num) => {
+  const isNumEven = evenFn(num)
+  console.log(`The number ${num} is an even number - ${isNumEven}`)
+}
+
+printResult(isEven, 16)
