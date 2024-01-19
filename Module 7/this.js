@@ -1,18 +1,18 @@
-// This Keyword : (Non Strict)
+// This Keyword : (Node Js - Non Strict Mode)
 
 // 'this' keyword refers to an object that is executing the current piece of code.
 // It references the object that executing the current function.
 
 console.log(this) // 1. Empty Object
 
-// 2. When you will be using function, then this keyword will always refferd to the global object.
+// 2. When you will be using function in non strict mode, then this keyword will always refferd to the global object.
 function displayThis () {
   console.log(this) // Global Object
 }
 
 displayThis()
 
-// 3. When you use function inside the Object , it basically refers to the object itself.
+// 3. When you use function inside the Object in non strict mode, it basically refers to the object itself.
 let myObj = {
   name: 'onkar',
   age: 25,
@@ -24,7 +24,7 @@ let myObj = {
 
 myObj.myFn()
 
-// 4. When you use function inside function inside the Object , it basically refers to the global object.
+// 4. When you use function inside function inside the Object in non strict mode , it basically refers to the global object.
 let myObj2 = {
   name: 'manish',
   age: 22,
