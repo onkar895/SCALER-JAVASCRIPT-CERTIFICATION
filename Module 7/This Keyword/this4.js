@@ -22,7 +22,7 @@ let myObj = {
 
 myObj.myFn()
 
-// 4. When you use function inside function inside the Object in strict mode , it always refers to undefined.
+// 4. When you use function inside function inside the Object in strict mode for browsers , it always refers to undefined.
 let myObj2 = {
   name: 'manish',
   age: 22,
