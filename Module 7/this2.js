@@ -30,7 +30,7 @@ let myObj2 = {
 
   myFn2: function () {
     function myFn3 () {
-      console.log(this) // global object
+      console.log(this) // undefined
     }
     myFn3()
   }

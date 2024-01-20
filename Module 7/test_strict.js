@@ -7,4 +7,4 @@ a = 10
 console.log(a) // error when using strict
 
 let b = 10
-console.log(a)
+console.log(b) // 10

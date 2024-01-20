@@ -5,7 +5,7 @@
 
 console.log(this) // 1. Empty Object
 
-// 2. When you will be using function in non strict mode, then this keyword will always refferd to the global object.
+// 2. When you will be using function in non strict mode, then this keyword will always reffered to the global object.
 function displayThis () {
   console.log(this) // Global Object
 }
