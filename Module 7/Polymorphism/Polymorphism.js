@@ -3,10 +3,14 @@
 // morph ->  forms
 // ism -> method
 
-// In JavaScript, polymorphism is a concept related to object-oriented programming (OOP) that allows objects of different types to be treated as objects of a common type.
+// In JavaScript, polymorphism is a concept related to object-oriented programming (OOP) that allows for, the same function to be used with different types of data.
 // In simple words, that you can have same named method and you can call it differently and it will give you different output, That's how polymorphism works.
 //  This enables code to be more flexible and adaptable.There are two main types of polymorphism in JavaScript: compile - time polymorphism(also known as method overloading) and runtime polymorphism(also known as method overriding).
 
+// 1. Compile-time Polymorphism: (Method Overloading)
+// JavaScript does not have traditional method overloading like some other languages, such as Java or C++. However, you can achieve a form of compile-time polymorphism by checking the number and types of arguments passed to a function and then responding accordingly.
+
+// Example 1:
 class Animal {
 
   sound () {
@@ -34,24 +38,39 @@ let Tommy = new Dog()
 Tommy.sound()
 let percy = new Cat()
 percy.sound()
-// So here you see that we have created 3 different objects from 3 different classes and inside all those classes we have same method called sound() but this method behaving differently when we are calling it for any other object. so basically it gets overriding.
+// So here you see that we have created 3 different objects from 3 different classes and inside all those classes we have same method called sound() but this method behaving differently when we are calling it for any other object. so basically it gets overridden.
 
-// 1. Compile-time Polymorphism:
-// JavaScript does not have traditional method overloading like some other languages, such as Java or C++. However, you can achieve a form of compile-time polymorphism by checking the number and types of arguments passed to a function and then responding accordingly.
+// Example 2 :
 
-// Here's a simple example:
-
-function add (x, y) {
-  if (arguments.length === 2) {
-    return x + y
-  } else if (arguments.length === 3) {
-    return arguments[0] + arguments[1] + arguments[2]
+class Shape {
+  constructor (name) {
+    this.name = name
+  }
+  draw () {
+    console.log(`Drawing a ${this.name}`)
   }
 }
 
-console.log(add(2, 3)); // Output: 5
-console.log(add(2, 3, 4)); // Output: 9
-// In this example, the add function behaves differently based on the number of arguments passed.
+class Circle extends Shape {
+  draw () {
+    console.log(`Drawing a Circle`)
+  }
+}
+
+class Square extends Shape {
+  draw () {
+    console.log(`Drawing a Square`)
+  }
+}
+
+let shape = new Shape('Shape')
+let circle = new Circle()
+let square = new Square()
+
+shape.draw() // Drawing a Shape
+circle.draw() // Drawing a Circle
+square.draw() // Drawing a Square
+// In this example, the draw() method is overridden in the subclasses Circle and Square, providing a different implementation of the method that is already provided by the superclass Shape.
 
 // 2. Runtime Polymorphism:
 // JavaScript supports runtime polymorphism through prototype-based inheritance. Objects can share a common prototype and override or extend methods.
