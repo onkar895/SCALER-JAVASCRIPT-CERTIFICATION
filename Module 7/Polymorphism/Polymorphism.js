@@ -3,7 +3,8 @@
 // morph ->  forms
 // ism -> method
 
-// In JavaScript, polymorphism is a concept related to object-oriented programming (OOP) that allows for, the same function to be used with different types of data.
+// In JavaScript, polymorphism is a concept related to object-oriented programming (OOP) that allows for, the same function to be used with different types of data. 
+// or you can say that it that refers to the ability of different objects to respond to the same method call in different ways.
 // In simple words, that you can have same named method and you can call it differently and it will give you different output, That's how polymorphism works.
 //  This enables code to be more flexible and adaptable.There are two main types of polymorphism in JavaScript: compile - time polymorphism(also known as method overloading) and runtime polymorphism(also known as method overriding).
 
