@@ -26,6 +26,3 @@ class Person1 {
 
 let Person2 = new Person1('rishi', 30)
 console.log(Person2)
-
-// Prototype chaining :
-// Prototype chaining in JavaScript is a fundamental concept in how JavaScript implements inheritance. Every object in JavaScript has a prototype, which is essentially a reference to another object. When you access a property or method of an object, JavaScript will first check if that property or method exists on the object itself. If it doesn't find it, it will look for it on the object's prototype, and then on the prototype's prototype, and so on, until it either finds the property/method or reaches the end of the prototype chain (the prototype is null).
