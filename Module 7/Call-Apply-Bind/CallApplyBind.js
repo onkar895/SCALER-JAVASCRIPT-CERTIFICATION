@@ -88,4 +88,25 @@ function sayGoodBye (greet) {
 var person2 = {name: 'Alice'}
 sayGoodBye.call(person2, 'sorry'); // Outputs: "Hello, Alice
 
-// Apply : Apply is very similar to the call function. The only difference is that in apply you can pass an array as an argument list.
+// Apply :
+// Apply is very similar to the call function. The only difference is that in 'apply' you can pass an array as an argument list.
+// This method is similar to call, but it accepts arguments as an array.
+
+function sayHello (greeting, lname) {
+  console.log(greeting + ', ' + this.name + ' ' + lname)
+}
+
+var person = {name: 'Bob'}
+sayHello.apply(person, ['Howdy', 'dizard']); // Outputs: "Howdy, Bob dizard"
+
+// Bind :
+// Bind is a function that helps you create another function that you can execute later with the new context of this that is provided.
+// This method creates a new function with a specified this value and, optionally, initial arguments.
+
+function sayHello () {
+  console.log('Hello, ' + this.name)
+}
+
+var person = {name: 'Charlie'}
+var sayHelloToCharlie = sayHello.bind(person)
+sayHelloToCharlie(); // Outputs: "Hello, Charlie"
