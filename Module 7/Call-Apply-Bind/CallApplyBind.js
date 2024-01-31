@@ -1,3 +1,8 @@
+// Before implementing bind(), apply(), and call() polyfills, let us know what is a polyfill in JavaScript:
+
+// Polyfill: 
+// Polyfills are the implementation of the features that are given by our browsers, but may not be present in the previous versions of it.
+
 // Why we need this call, apply and bind :
 
 let Person1 = {
@@ -29,3 +34,42 @@ Person2.printDetails()
 
 // So what we can do here, so that we don't need to repeat the functions for every single object.
 // We can use Call, apply and bind.
+
+// Call : Call is a function that helps you change the context of the invoking function.
+
+let Person3 = {
+  fname: 'onkar',
+  lname: 'karale',
+  age: 24,
+
+  printDetails: function () {
+    console.log(`Hi I am ${this.fname} ${this.lname} and my age is ${this.age}`)
+  }
+
+}
+
+// printDetails: function () {
+//     console.log(`Hi I am ${this.fname} ${this.lname} and my age is ${this.age}`)
+//   }
+// You can also access the function from globally for each of the objects like
+// printDetails.call(Person4)
+
+let Person4 = {
+  fname: 'RAJ',
+  lname: 'malhotra',
+  age: 34
+}
+
+// call 
+Person3.printDetails.call(Person4)
+
+// So here you can see that by using 'call' we are not repeating the same method for every object. we just called 'Person3' and told to give the particular function you have to 'Person4'.
+
+function sayHello () {
+  console.log('Hello, ' + this.name)
+}
+
+var person = {name: 'Alice'}
+sayHello.call(person); // Outputs: "Hello, Alice
+
+// Apply : Apply is very similar to the call function. The only difference is that in apply you can pass an array as an argument list.
