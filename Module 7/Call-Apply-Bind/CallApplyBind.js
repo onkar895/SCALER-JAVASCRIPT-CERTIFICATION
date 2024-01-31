@@ -100,8 +100,8 @@ var person = {name: 'Bob'}
 sayHello.apply(person, ['Howdy', 'dizard']); // Outputs: "Howdy, Bob dizard"
 
 // Bind :
-// Bind is a function that helps you create another function that you can execute later with the new context of this that is provided.
-// This method creates a new function with a specified this value and, optionally, initial arguments.
+// Bind is a function that helps you create another function that you can execute later with the new context of 'this' that is provided.
+// This method actually allows you to store the function and call it at the later stage of time.
 
 function sayHello () {
   console.log('Hello, ' + this.name)
