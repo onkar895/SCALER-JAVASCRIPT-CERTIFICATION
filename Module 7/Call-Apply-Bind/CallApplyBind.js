@@ -37,6 +37,7 @@ Person2.printDetails()
 
 // Call : Call is a function that helps you change the context of the invoking function.
 
+// Example 1:
 let Person3 = {
   fname: 'onkar',
   lname: 'karale',
@@ -54,6 +55,12 @@ let Person3 = {
 // You can also access the function from globally for each of the objects like
 // printDetails.call(Person4)
 
+// printDetails: function (city) {
+//     console.log(`Hi I am ${this.fname} ${this.lname} and my age is ${this.age} and I am from ${city}`)
+//   }
+// You can also add the parameter to the function
+// printDetails.call(Person4, "pune")
+
 let Person4 = {
   fname: 'RAJ',
   lname: 'malhotra',
@@ -65,11 +72,20 @@ Person3.printDetails.call(Person4)
 
 // So here you can see that by using 'call' we are not repeating the same method for every object. we just called 'Person3' and told to give the particular function you have to 'Person4'.
 
+// Example 2 :
 function sayHello () {
   console.log('Hello, ' + this.name)
 }
 
 var person = {name: 'Alice'}
 sayHello.call(person); // Outputs: "Hello, Alice
+
+// Example 3 with parameters and arguments:
+function sayGoodBye (greet) {
+  console.log('Goodbye, ' + this.name + ' ' + greet)
+}
+
+var person2 = {name: 'Alice'}
+sayGoodBye.call(person2, 'sorry'); // Outputs: "Hello, Alice
 
 // Apply : Apply is very similar to the call function. The only difference is that in apply you can pass an array as an argument list.
