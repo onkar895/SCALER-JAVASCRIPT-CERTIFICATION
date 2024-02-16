@@ -21,6 +21,23 @@ var c = arr2.pop()
 console.log('popped element:', c)
 console.log('popped array', arr2)
 
+// What if I want to remove any element in the array :
+
+// Using Splice
+var array = [1, 2, 3, 4, 5]
+array.splice(2, 1) // index i want to remove is 2 and there is only 1 element I want to remove
+console.log(array); // Output: [1, 2, 4, 5]
+
+// Using Filter
+var array = [1, 2, 3, 4, 5]
+var indexToRemove = 2 // Index of the element you want to remove
+
+var newArray = array.filter(function (value, index) {
+  return index !== indexToRemove
+})
+
+console.log(newArray); // Output: [1, 2, 4, 5]
+
 // push method : This method adds the new element to the end of an array
 arr2.push(100)
 console.log('pushed array', arr2)
