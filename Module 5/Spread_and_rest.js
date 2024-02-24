@@ -34,8 +34,11 @@ const nums = [1, 2, 3]
 const sum = (a, b, c) => a + b + c
 console.log(sum(...nums)); // Output: 6
 
+// Add Squared array using spread :
 const Num = [2, 3, 4]
-const addSquaredArray = (x, y, z) => x * x + y * y + z * z
+const addSquaredArray = () => {
+  return Num.map((xyz) => xyz * xyz).reduce((acc, curr) => acc + curr, 0)
+}
 console.log(addSquaredArray(...Num))
 
 // Rest Parameter (...) :
@@ -53,7 +56,14 @@ console.log(sum1(1, 2, 3, 4)); // Output: 10
 console.log(sum1(1, 2, 3, 4, 5)); // Output: 15
 // In this example, the sum function can accept any number of arguments, and the rest parameter ...numbers collects all these arguments into an array called numbers, allowing us to perform operations on them easily.
 
-const addSquaredArray1 = (...Num1) => {
+// Squared Array using rest :
+const SquaredArray1 = (...Num1) => {
   return Num1.map((xyz) => xyz * xyz)
+}
+console.log(SquaredArray1(2, 4, 6))
+
+//  Add squared Array using rest :
+const addSquaredArray1 = (...Num1) => {
+  return Num1.map((xyz) => xyz * xyz).reduce((acc, curr) => acc + curr, 0)
 }
 console.log(addSquaredArray1(2, 4, 6))
