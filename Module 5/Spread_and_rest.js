@@ -55,7 +55,7 @@ console.log(sum1(1, 2)); // Output: 3
 console.log(sum1(1, 2, 3, 4)); // Output: 10
 console.log(sum1(1, 2, 3, 4, 5)); // Output: 15
 // In this example, the sum function can accept any number of arguments, and the rest parameter ...numbers collects all these arguments into an array called numbers, allowing us to perform operations on them easily.
-
+ 
 // Squared Array using rest :
 const SquaredArray1 = (...Num1) => {
   return Num1.map((xyz) => xyz * xyz)
