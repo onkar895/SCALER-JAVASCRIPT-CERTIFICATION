@@ -33,3 +33,15 @@ while (i <= n) {
   console.log(i)
   i++
 }
+
+// Squared array using while
+var x = 1
+var n = 5
+var s = []
+
+while (x <= n) {
+  s.push(x * x)
+  x++
+}
+
+console.log(s)

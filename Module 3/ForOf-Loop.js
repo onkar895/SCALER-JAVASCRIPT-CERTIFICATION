@@ -8,7 +8,7 @@ for (var score of scores) {
   console.log(score)
 }
 
-// The only difference in 'ForIn & ForOf' loop is that in ForIn loop the variable score is taking a particular index or keys. But in ForOf loop var score taking a actual value in the array.
+// The only difference in 'ForIn & ForOf' loop is that in ForIn loop, variable score is taking a particular index or keys. But in ForOf loop, var score taking a actual value in the array.
 
 // So what If I want to indicate the index of an array or object key using ForOf Loop
 // So for that, there is a method known as "entries()"
