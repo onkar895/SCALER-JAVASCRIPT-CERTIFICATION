@@ -1,5 +1,6 @@
 // Pure Functions :
 // A pure function is a function that, given the same input, will always return the same output, and it has no observable side effects.
+// So basically, Pure functions are the functions that are not dependent upon the external factor and the external resource.
 
 var a = 2
 // Impure Function 
@@ -18,7 +19,7 @@ function ImPure1 (x, a) {
 }
 
 ImPure1(4, 5)
-// It's also a not pure function that, this time its not depending upon the external factor but depends upon the external resource within the function like console.log
+// It's also not a pure function that, this time its not depending upon the external factor but depends upon the external resource within the function like console.log
 
 // Pure Function :
 function Pure (x, a) {
