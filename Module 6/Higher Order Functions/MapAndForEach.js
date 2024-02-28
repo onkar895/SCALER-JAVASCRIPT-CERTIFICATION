@@ -1,7 +1,19 @@
 // Higher Order Function :
 
 // Higher Order Functions are functions that operate on other functions, either by taking them as arguments or by returning them.
-// In simple words, A higher order function is a function that receives a function as an argument or returns the function as output.
+// In simple words, A higher order function is a function that receives a function as an argument or returns the function as their output.
+// You can pass functions as arguments to another function. This is often used in callback functions.
+
+function higherOrderFunction (callback) {
+  console.log('Executing higher-order function')
+  callback() // invoking the callback function
+}
+
+function callbackFunction () {
+  console.log("I'm a callback function")
+}
+
+higherOrderFunction(callbackFunction)
 
 // Normal Way to get Squared array :
 let arr = [1, 2, 3, 4, 5]
@@ -41,7 +53,7 @@ console.log(transactionInINR)
 
 // ForEach Method :
 //  It does not return anything (or returns undefined). It is used for iterating over the elements of an array and performing a side effect (like modifying the array or performing some operation on each element).
-// The only difference in 'map and forEach' that forEach actually won't return anything. So, You can use forEach inside its scope only.
+// The only difference in 'map and forEach' is that forEach actually won't return anything. So, You can use forEach inside its scope only.
 // And also forEach will not return a new array, It will only return the values which neither an array nor an objects.
 const transactionInINR1 = transactions.forEach((Inr) => {
   console.log((Inr / INRTODOLLAR).toFixed(0))
