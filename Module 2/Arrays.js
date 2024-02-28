@@ -25,14 +25,14 @@ console.log('popped array', arr2)
 
 // Using Splice
 var array = [1, 2, 3, 4, 5]
-array.splice(2, 1) // index i want to remove is 2 and there is only 1 element I want to remove
+array.splice(2, 1) // index I want to remove is 2 and there is only 1 element I want to remove
 console.log(array); // Output: [1, 2, 4, 5]
 
 // Using Filter
 var array = [1, 2, 3, 4, 5]
 var indexToRemove = 2 // Index of the element you want to remove
 
-var newArray = array.filter(function (value, index) {
+var newArray = array.filter(function (index) {
   return index !== indexToRemove
 })
 

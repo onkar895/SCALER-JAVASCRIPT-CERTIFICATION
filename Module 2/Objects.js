@@ -1,4 +1,4 @@
-// Objects in javascript are unorderd collection of 'key-value' pairs. and these key-value pairs are called 'properties'
+// Objects in javascript are unorderd collection of 'key-value' pairs. and these key-value pairs are called 'properties'.
 
 var person = {
   Firstname: 'onkar',
@@ -13,6 +13,7 @@ console.log(person.age)
 
 // bracket notation
 console.log(person['Lastname'])
+console.log(person['Firstname'])
 
 // many Objects and arrays inside one object :
 var captain = {
@@ -34,7 +35,7 @@ var captain = {
 var cap = captain.friends[1]
 console.log(cap) // Bruce
 
-// accesing aobject inside an object
+// accesing object inside an object
 var obj = captain.address.city.name
 console.log(obj) // Brooklyn
 
