@@ -4,7 +4,35 @@
 // Promises provide a more elegant way of handling the asynchronous operations compared to callback functions.
 // By creating a promise, you are essentially telling the JavaScript engine to "promise" to perform a specific action and notify you once it is completed or fails. The code either executes or fails , in both the cases subscriber will be notified.
 // Next, callback functions are then attached to the promise to handle the outcome of the action. These callbacks will be invoked when the promise is fulfilled (action completed successfully) or rejected (action failed).
-//
+
+// Why we need promises:
+// Because of Callback hell or pyramid of Doom:
+
+// 1. Callbacks provide a useful way to handle asynchronous operations. However, when many callbacks are nested, then code can be complex and hard to read and understand.
+
+// 2. This happens when you chain multiple callbacks together, one after the other, creating a pyramid - like structure of indentation called callback hell, also known as the "Pyramid of Doom".
+
+// Example of callback hell:
+
+// getData(function(a) {
+//     getMoreData(a, function(b) {
+//       getEvenMoreData(b, function(c) {
+//         getEvenEvenMoreData(c, function(d) {
+//           getFinalData(d, function(finalData) {
+//             console.log(finalData)
+//           })
+//         })
+//       })
+//     })
+//   })
+
+// 1. In the avove example ,  The getData function takes a callback as an argument and is executed after data is retrieved.
+// 2. The callback function then takes the data and calls the getMoreData function, which also takes a callback as an argument, and so on.
+
+//  This nesting of callbacks can make the code difficult to maintain, and the indentation makes it even harder to see the overall structure of the code.
+//  To avoid this callback hell, we can use a more modern way of handling async operations known as promises.
+
+// Example of Promise :
 
 // To understand more about promises, let's look at an example from the actual world.
 // Assume for the moment that my mother constantly complains me for not bringing the groceries from the market or breaking her promise.
