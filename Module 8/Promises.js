@@ -53,14 +53,31 @@ let myPromise = new Promise((resolve, reject) => {
 console.log(myPromise)
 
 // fulfilled - then method
+// consuming your promises
 myPromise.then((result) => {
-  console.log(result)
+  console.log(result) // fulfilled state
 }).catch((err) => {
-  console.log(err)
+  console.log(err) // rejected state
+}).finally(() => {
+  console.log('Your promise will get setlled')
 })
 //  The .then method is called when a promise is fulfilled.
 // and the .catch method is called when a promise is rejected.
-// Once the promise is fulfilled, the .then callback method will be called with the resolved value. 
+// Once the promise is fulfilled, the .then callback method will be called with the resolved value.
 // And if the promise is rejected, the .catch method will be called with an error message.
-// You can also add the .finally() method, which will be called after a promise is settled. 
+// You can also add the .finally() method, which will be called after a promise is settled.
 // This means that .finally() will be invoked regardless of the status of a promise (whether resolved or rejected).
+
+// How to Use the Promise.all Method: 
+
+// The Promise.all() method takes an array of promises as input and returns a single promise that is fulfilled 
+// when all input promises have been fulfilled. It can be useful when you wait for multiple promises to be resolved before taking action.
+let promise1 = fetch('https://jsonplaceholder.typicode.com/posts/1')
+let promise2 = fetch('https://jsonplaceholder.typicode.com/posts/2')
+let promise3 = fetch('https://jsonplaceholder.typicode.com/posts/3')
+// Here, promise1, promise2, and promise3 are promises that are fetching data from three different URLs.
+
+Promise.all([promise1, promise2, promise3])
+  .then((values) => {
+    console.log(values)
+  })
