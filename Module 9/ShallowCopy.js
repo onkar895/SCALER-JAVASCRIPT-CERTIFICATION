@@ -22,6 +22,7 @@ secondperson.address.city = 'Mumbai'
 
 console.log(firstperson)
 console.log(secondperson)
-// The firstperson object remains unchanged because the modifications were made only to the secondperson object.
 
 // The secondperson object has its name property changed to 'rishi', and the city property of the nested address object is changed to 'Mumbai'.
+
+// This approach effectively creates a shallow copy of the object, ensuring that modifications to the copied object will affect the original object.
