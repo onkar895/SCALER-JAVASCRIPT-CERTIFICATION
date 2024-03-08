@@ -62,3 +62,55 @@ console.log('unshifted array', arr2)
 
 // 5. toString() method :
 // The toString() method converts the given value into the string.
+let courses = ['HTML', 'CSS', 'JavaScript', 'React']
+let str = courses.toString() // Converting array ot String 
+console.log(str) // HTML,CSS,JavaScript,React
+
+// 6. join method :
+// This join() method helps to join two arrays as a string. If we pass any parameter to this method it will join the array by using that parameter.
+let courses1 = ['HTML', 'CSS', 'JavaScript', 'React']
+console.log(courses1.join('|')) // Joining the array elements
+// HTML|CSS|JavaScript|React
+
+// 7. delete operator :
+// The delete operator used to delete the given value that can be object, array or anything.
+
+let emp = {
+  firstName: 'Raj',
+  lastName: 'Kumar',
+  salary: 40000
+}
+
+console.log(delete emp.salary)
+console.log(emp)
+
+// 8. The concat() method :
+// The concat() method  is used to concatinate the two or more arrays and it gives the mergerd array.
+// Declare three arrays 
+let arr1 = [11, 12, 13]
+let arr2 = [14, 15, 16]
+let arr3 = [17, 18, 19]
+
+let newArr = arr1.concat(arr2, arr3)
+console.log(newArr) // [ 11, 12, 13, 14, 15, 16, 17, 18, 19 ]
+
+// 9. Splice Method :
+// The splice() method is used to Insert and Remove elements in between the Array.
+// Syntax : Array.splice (start, deleteCount, item 1, item 2….) 
+// Declare and initialize array 
+let numArr = [20, 30, 40, 50]
+// Removing an adding element at a particular location in an array :
+numArr.splice(1, 3) // Delete 3 elements starting from index 1  // 20
+
+numArr.splice(1, 0, 3, 4, 5) // Insert 80, 90, 100 at starting index 1  
+console.log(numArr)
+
+// Declare and initialize array 
+let strArr = ['amit', 'sumit', 'anil']
+// Delete two elements starting from index 1 and add three elements. 
+strArr.splice(1, 2, 'Geeks', 'Geeks1', 'Geeks2')
+
+console.log(strArr) // [ 'amit', 'Geeks', 'Geeks1', 'Geeks2' ]
+
+// 9. slice() method
+// The slice() method returns a new array containing a portion of the original array, based on the start and end index provided as arguments
